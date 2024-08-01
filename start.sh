@@ -139,7 +139,7 @@ fi
 if [ "$?" != 0 ]; then
     echo "Unable to connect to update website (internet connection may be down).  Skipping update ..."
 else
-        curl -H "Accept-Encoding: identity" -H "Accept-Language: en" -L -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4.212 Safari/537.36" -o /minecraft/fabric.jar "https://meta.fabricmc.net/v2/versions/loader/1.21/0.15.11/1.0.1/server/jar"
+        curl -H "Accept-Encoding: identity" -H "Accept-Language: en" -L -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4.212 Safari/537.36" -o /minecraft/fabric.jar "https://maven.minecraftforge.net/net/minecraftforge/forge/1.21-51.0.29/forge-1.21-51.0.29-installer.jar"
     fi
 
     # Update Floodgate
