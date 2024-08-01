@@ -182,7 +182,6 @@ else
     else
         echo "ViaVersion is disabled -- skipping"
     fi
-fi
 
 # Accept EULA
 AcceptEULA=$(echo eula=true >eula.txt)
