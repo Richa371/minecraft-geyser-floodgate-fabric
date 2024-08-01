@@ -39,8 +39,8 @@ fi
 if [ ! -d "/minecraft/backups" ]; then
     mkdir -p /minecraft/backups
 fi
-if [ ! -d "/minecraft/plugins/Geyser-Spigot" ]; then
-    mkdir -p /minecraft/plugins/Geyser-Spigot
+if [ ! -d "/minecraft/mods/Geyser-Spigot" ]; then
+    mkdir -p /minecraft/mods/Geyser-Spigot
 fi
 
 # Check if network interfaces are up
@@ -121,8 +121,8 @@ fi
 if [ ! -e "/minecraft/server.properties" ]; then
     cp /scripts/server.properties /minecraft/server.properties
 fi
-if [ ! -e "/minecraft/plugins/Geyser-Spigot/config.yml" ]; then
-    cp /scripts/config.yml /minecraft/plugins/Geyser-Spigot/config.yml
+if [ ! -e "/minecraft/mods/Geyser-Spigot/config.yml" ]; then
+    cp /scripts/config.yml /minecraft/mods/Geyser-Spigot/config.yml
 fi
 
 # Test internet connectivity first
@@ -190,8 +190,8 @@ AcceptEULA=$(echo eula=true >eula.txt)
 sed -i "/server-port=/c\server-port=$Port" /minecraft/server.properties
 sed -i "/query\.port=/c\query\.port=$Port" /minecraft/server.properties
 # Change Bedrock port in Geyser config
-if [ -e /minecraft/plugins/Geyser-Spigot/config.yml ]; then
-    sed -i -z "s/  port: [0-9]*/  port: $BedrockPort/" /minecraft/plugins/Geyser-Spigot/config.yml
+if [ -e /minecraft/mods/Geyser-Spigot/config.yml ]; then
+    sed -i -z "s/  port: [0-9]*/  port: $BedrockPort/" /minecraft/mods/Geyser-Spigot/config.yml
 fi
 
 # Start server
